@@ -1,1 +1,1 @@
-console.log('Loaded!');
+console.log('Welcome to reAL DEVELOPMENT OF APP!');
