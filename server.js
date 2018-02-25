@@ -20,15 +20,15 @@ app.get('/ui/madi.png', function (req, res) {
 //from here new web pages are added
 
 //first web page
-app.get('/firstWebPage', function (req, res) {
+app.get('firstWebPage', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'firstwebPage.html'));
 });
 //second web page
-app.get('/secondWebPage', function (req, res) {
+app.get('secondWebPage', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'secondWebPage.html'));
 });
 //third webpage
-app.get('/thirdWebPage', function (req, res) {
+app.get('thirdWebPage', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'thirdWebPage.html'));
 });
 
