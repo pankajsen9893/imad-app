@@ -21,7 +21,7 @@ app.get('/ui/madi.png', function (req, res) {
 
 //first web page
 app.get('/firstWebPage', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'firstwebPage.html'));
+  res.sendFile(path.join(__dirname, 'ui', 'firstWebPage.html'));
 });
 //second web page
 app.get('/secondWebPage', function (req, res) {
