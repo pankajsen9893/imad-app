@@ -20,16 +20,16 @@ app.get('/ui/madi.png', function (req, res) {
 //from here new web pages are added
 
 //first web page
-app.get('firstWebPage', function (req, res) {
-  res.sendFile(path.join(__dirname, '/', 'firstwebPage.html'));
+app.get('/firstWebPage', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'firstwebPage.html'));
 });
 //second web page
-app.get('secondWebPage', function (req, res) {
-  res.sendFile(path.join(__dirname, '/', 'secondWebPage.html'));
+app.get('/secondWebPage', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'secondWebPage.html'));
 });
 //third webpage
-app.get('thirdWebPage', function (req, res) {
-  res.sendFile(path.join(__dirname, '/', 'thirdWebPage.html'));
+app.get('/thirdWebPage', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'thirdWebPage.html'));
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
