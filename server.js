@@ -4,7 +4,55 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+var firstPage={
+    title:'First Web Page',
+    heading:'First Web Page',
+    content:
+    `<p>hello welcome to firstWebPage. this is my first content page on hasura. lets start the most advance project development using hasura and cloud. We will also make use of github to follow or develope the new project.</p>
+        
+    <p>hello welcome to firstWebPage. this is my first content page on hasura. lets start the most advance project development using hasura and cloud. We will also make use of github to follow or develope the new project.</p>
 
+    <p>Todays date: abc</p>
+
+    <p>hello welcome to firstWebPage. this is my first content page on hasura. lets start the most advance project development using hasura and cloud. We will also make use of github to follow or develope the new project.</p>`
+    
+};
+function createTemplate(data){
+var title=data.title;
+var heading=data.heading;
+var content=data.content;
+var htmlTemplateString = 
+        ` <!DOCTYPE html>
+        <html>
+            <head>
+                    <title>FirstWebPage</title>
+                    <meta name="viewport" content ="width=device-width" initial-scale= 1/>
+                    <link href="/ui/style.css" rel="stylesheet" />
+            </head>
+          <body>
+            <div class='container'>
+                 <div>
+                 <a href="/">Home</a>
+                 </div>
+            
+                 <h1>First Web page</h1>
+            
+                  <hr/>
+            
+                  <div>
+                    <p>hello welcome to firstWebPage. this is my first content page on hasura. lets start the most advance project development using hasura and cloud. We will also make use of github to follow or develope the new project.</p>
+                
+                    <p>hello welcome to firstWebPage. this is my first content page on hasura. lets start the most advance project development using hasura and cloud. We will also make use of github to follow or develope the new project.</p>
+                
+                    <p>Todays date: abc</p>
+                
+                    <p>hello welcome to firstWebPage. this is my first content page on hasura. lets start the most advance project development using hasura and cloud. We will also make use of github to follow or develope the new project.</p>
+                 </div>
+              </div>
+           </body>
+        </html> `;
+    return htmlTemplateString;
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -22,7 +70,7 @@ app.get('/ui/madi.png', function (req, res) {
 
 //first web page
 app.get('/firstWebPage', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'firstWebPage.html'));
+  res.send(createTemplate(firstPage));
 });
 //second web page
 app.get('/secondWebPage', function (req, res) {
