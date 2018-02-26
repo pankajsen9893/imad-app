@@ -4,7 +4,9 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var firstPage={
+var pages={
+    
+firstPage: {
     title:'First Web Page',
     heading:'First Web Page',
     content:
@@ -16,6 +18,21 @@ var firstPage={
 
     <p>hello welcome to firstWebPage. this is my first content page on hasura. lets start the most advance project development using hasura and cloud. We will also make use of github to follow or develope the new project.</p>`
     
+},
+secondPage: {
+    title:'Second Web Page',
+    heading:'Second Web Page',
+    content:
+        `<p>hello welcome to secondWebPage</p>
+        <p>hello welcome to secondWebPage</p>
+        <p>hello welcome to secondWebPage</p>`
+},
+thirdWebPage: {
+    title:'third Web Page',
+    heading:'Third Web Page',
+    content:
+    `<p>hello welcome to Third Web Page</p>` 
+}
 };
 function createTemplate(data){
 var title=data.title;
