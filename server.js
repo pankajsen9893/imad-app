@@ -87,7 +87,7 @@ app.get('/ui/madi.png', function (req, res) {
 
 //first web page
 app.get('/firstWebPage', function (req, res) {
-  res.send(createTemplate(firstPage));
+  res.send(createTemplate(pages));
 });
 //second web page
 app.get('/secondWebPage', function (req, res) {
