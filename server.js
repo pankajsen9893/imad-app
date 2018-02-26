@@ -4,6 +4,13 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+var object= {
+    content: ` <div>
+        <p>hello welcome to firstWebPage</p>
+        <p>Todays date: abc</p>
+        <p>pqrs</p>
+    </div>`
+};
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
