@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 var pages={
     
-firstPage: {
+'firstWebPage': {
     title:'First Web Page',
     heading:'First Web Page',
     content:
@@ -19,7 +19,7 @@ firstPage: {
     <p>hello welcome to firstWebPage. this is my first content page on hasura. lets start the most advance project development using hasura and cloud. We will also make use of github to follow or develope the new project.</p>`
     
 },
-secondPage: {
+'secondWebPage': {
     title:'Second Web Page',
     heading:'Second Web Page',
     content:
@@ -27,7 +27,7 @@ secondPage: {
         <p>hello welcome to secondWebPage</p>
         <p>hello welcome to secondWebPage</p>`
 },
-thirdWebPage: {
+'thirdWebPage': {
     title:'third Web Page',
     heading:'Third Web Page',
     content:
@@ -86,17 +86,18 @@ app.get('/ui/madi.png', function (req, res) {
 //from here new web pages are added
 
 //first web page
-app.get('/firstWebPage', function (req, res) {
-  res.send(createTemplate(pages));
+app.get('/:WebPage', function (req, res) {
+    var WebPages = req.params.WebPage;
+  res.send(createTemplate(pages[WebPage]));
 });
 //second web page
-app.get('/secondWebPage', function (req, res) {
+/*app.get('/secondWebPage', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'secondWebPage.html'));
 });
 //third webpage
 app.get('/thirdWebPage', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'thirdWebPage.html'));
-});
+});*/
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
