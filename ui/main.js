@@ -1,9 +1,9 @@
 var button = document.getElementById('counter');
-var counting=0;
+var count=0;
 button.onclick = function() {
-    counting=counting+1;
+    count=count+1;
     var span = documnet.getElementById('count');
-    span.innerHTML = counting.toString();
+   return( span.innerHTML = count.toString());
 };
 
 
