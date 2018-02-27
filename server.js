@@ -76,6 +76,11 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
+// using counter to set counter End Point
+var counter = 0;
+app.get('/counter', function(req, res){
+    res.send(counter.toString());
+});
 
 //from here new web pages are added
 
