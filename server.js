@@ -42,7 +42,7 @@ var htmlTemplateString =
         ` <!DOCTYPE html>
         <html>
             <head>
-                    <title>${title};</title>
+                    <title>${title}</title>
                     <meta name="viewport" content ="width=device-width" initial-scale= 1/>
                     <link href="/ui/style.css" rel="stylesheet" />
             </head>
@@ -52,12 +52,12 @@ var htmlTemplateString =
                  <a href="/">Home</a>
                  </div>
             
-                 <h1>${heading};</h1>
+                 <h1>${heading}</h1>
             
                   <hr/>
             
                   <div>
-                   ${content};
+                   ${content}
                  </div>
               </div>
            </body>
