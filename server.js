@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 var pages={
     
 'firstWebPage': {
-    title:'First Web Page',
+    title:`First Web Page`,
     heading:'First Web Page',
     content:
     `<p>hello welcome to firstWebPage. this is my first content page on hasura. lets start the most advance project development using hasura and cloud. We will also make use of github to follow or develope the new project.</p>
@@ -42,7 +42,7 @@ var htmlTemplateString =
         ` <!DOCTYPE html>
         <html>
             <head>
-                    <title>${title};</title>
+                    <title>${title}</title>
                     <meta name="viewport" content ="width=device-width" initial-scale= 1/>
                     <link href="/ui/style.css" rel="stylesheet" />
             </head>
@@ -52,12 +52,12 @@ var htmlTemplateString =
                  <a href="/">Home</a>
                  </div>
             
-                 <h1>${heading};</h1>
+                 <h1>${heading}</h1>
             
                   <hr/>
             
                   <div>
-                   ${content};
+                   ${content}
                  </div>
               </div>
            </body>
