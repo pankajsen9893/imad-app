@@ -79,6 +79,7 @@ app.get('/ui/madi.png', function (req, res) {
 // using counter to set counter End Point
 var counter = 0;
 app.get('/counter', function(req, res){
+    counter=counter+1;
     res.send(counter.toString());
 });
 
